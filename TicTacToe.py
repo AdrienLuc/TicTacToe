@@ -17,15 +17,15 @@ class TicTacToe:
     player=1
     ö=1
     form=""
-    k=""
-    l=""
-    j=""
-    p=""
-    ü=""
-    ä=""
-    üü=""
-    ää=""
-    öö=""
+    k=" "
+    l=" "
+    j=" "
+    p=" "
+    ü=" "
+    ä=" "
+    üü=" "
+    ää=" "
+    öö=" "
     usa=0
     fofo=1
     pipi=0
@@ -42,11 +42,11 @@ class TicTacToe:
             
                 print("    1   2   3  ")
                 print("  +---+---+---+")
-                print("1 |",k," | ",p,"| ",üü,"|")
+                print("1 |",k,"|",p,"|",üü,"|")
                 print("  +---+---+---+")
-                print("2 |",l," | ",ü,"| ",ää,"|")
+                print("2 |",l,"|",ü,"|",ää,"|")
                 print("  +---+---+---+")
-                print("3 |",j," | ",ä,"| ",öö,"|")
+                print("3 |",j,"|",ä,"|",öö,"|")
                 print("  +---+---+---+")
             round+=1
             if player==1:
@@ -61,23 +61,23 @@ class TicTacToe:
             y= int(input("Position y:"))
                 
             
-            if x==1 and y==2 and l=="":
+            if x==1 and y==2 and l==" ":
                 l=form
-            elif x==1 and y==1 and k=="":
+            elif x==1 and y==1 and k==" ":
                 k=form
-            elif x==1 and y==3 and j=="":
+            elif x==1 and y==3 and j==" ":
                 j=form
-            elif x==2 and y==1 and p=="":
+            elif x==2 and y==1 and p==" ":
                 p=form
-            elif x==2 and y==3 and ä=="":
+            elif x==2 and y==3 and ä==" ":
                 ä=form
-            elif x==2 and y==2 and ü=="":
+            elif x==2 and y==2 and ü==" ":
                 ü=form
-            elif x==3 and y==3 and öö=="":
+            elif x==3 and y==3 and öö==" ":
                 öö=form
-            elif x==3 and y==2 and ää=="":
+            elif x==3 and y==2 and ää==" ":
                 ää=form
-            elif x==3 and y==1 and üü=="":
+            elif x==3 and y==1 and üü==" ":
                 üü=form
             elif x>3 or y>3:
                 print(bcolors.WARNING +"Error - Falsche Eigabe! (Wähle zwischen 1-3)!"+bcolors.ENDC)
@@ -101,11 +101,11 @@ class TicTacToe:
                 
                 print("    1   2   3  ")
                 print("  +---+---+---+")
-                print("1 | ",k,"| ",p,"| ",üü,"|")
+                print("1 |",k,"|",p,"|",üü,"|")
                 print("  +---+---+---+")
-                print("2 | ",l,"| ",ü,"| ",ää,"|")
+                print("2 |",l,"|",ü,"|",ää,"|")
                 print("  +---+---+---+")
-                print("3 | ",j,"| ",ä,"| ",öö,"|")
+                print("3 |",j,"|",ä,"|",öö,"|")
                 print("  +---+---+---+")
                 if form=="X":
                     print(bcolors.WARNING +"Player 1 (X) won!"+bcolors.ENDC)
@@ -115,25 +115,25 @@ class TicTacToe:
                 if form=="O":
                     print("    1   2   3  ")
                     print("  +---+---+---+")
-                    print("1 | ",k,"| ",p,"| ",üü,"|")
+                    print("1 |",k,"|",p,"|",üü,"|")
                     print("  +---+---+---+")
-                    print("2 | ",l,"| ",ü,"| ",ää,"|")
+                    print("2 |",l,"|",ü,"|",ää,"|")
                     print("  +---+---+---+")
-                    print("3 | ",j,"| ",ä,"| ",öö,"|")
+                    print("3 |",j,"|",ä,"|",öö,"|")
                     print("  +---+---+---+")
                     print(bcolors.WARNING +"Player 2 (O) won!"+bcolors.ENDC)
                     pipi=1
                     sos=0
                 
 
-            if k and p and üü and l and ü and ää and j and ä and öö !="" and sos==1:
+            if k!=" "  and p!=" "  and üü!=" "  and l!=" "  and ü!=" "  and ää!=" "  and j!=" "  and ä!=" "  and öö !=" " and sos==1:
                 print("    1   2   3  ")
                 print("  +---+---+---+")
-                print("1 | ",k,"| ",p,"| ",üü,"|")
+                print("1 |",k,"|",p,"|",üü,"|")
                 print("  +---+---+---+")
-                print("2 | ",l,"| ",ü,"| ",ää,"|")
+                print("2 |",l,"|",ü,"|",ää,"|")
                 print("  +---+---+---+")
-                print("3 | ",j,"| ",ä,"| ",öö,"|")
+                print("3 |",j,"|",ä,"|",öö,"|")
                 print("  +---+---+---+")
                 print(bcolors.WARNING +"Game is over! Nobody won!"+bcolors.ENDC)
                 pipi=1
@@ -146,14 +146,14 @@ class TicTacToe:
                     fofo=1
                     usa=0
                     print("    1   2   3  \n  +---+---+---+\n1 |   |   |   |\n  +---+---+---+\n2 |   |   |   |\n  +---+---+---+\n3 |   |   |   |\n  +---+---+---+")
-                    k=p=üü=l=ü=ää=j=ä=öö=""
+                    k=p=üü=l=ü=ää=j=ä=öö=" "
                     pipi=0
                 else:
                     fofo=0
                     ö=0
                     pipi=0
 
-            if x==2 and y==2 or y==1 or y==3 and k==l==j=="":
+            if x==2 and y==2 or y==1 or y==3 and k==l==j==" ":
                 ln1=="" 
                 ln2==""
                 ln3=="" 
