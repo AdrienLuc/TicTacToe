@@ -1,4 +1,19 @@
 
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[101m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+
+ln1=""
+ln2=""
+ln3=""
 player=1
 ö=1
 form=""
@@ -21,12 +36,12 @@ while fofo==1:
         if usa==1:
         
             print("    1   2   3  ")
+            print("  +-",ln1,ln2,ln3,"--+---+---+")
+            print("1 |",k,"| ",p,"| ",üü,"|")
             print("  +---+---+---+")
-            print("1 | ",k,"| ",p,"| ",üü,"|")
+            print("2 |",l,"| ",ü,"| ",ää,"|")
             print("  +---+---+---+")
-            print("2 | ",l,"| ",ü,"| ",ää,"|")
-            print("  +---+---+---+")
-            print("3 | ",j,"| ",ä,"| ",öö,"|")
+            print("3 |",j,"| ",ä,"| ",öö,"|")
             print("  +---+---+---+")
         
         if player==1:
@@ -34,7 +49,7 @@ while fofo==1:
         else:
             asa="X"
 
-        print ("Spieler",player,"(",asa,")""ist dran.")
+        print ("Spieler",player,"(",asa,")"" ist dran.")
         x= int(input("Position x:"))
         y= int(input("Position y:"))
 
@@ -73,7 +88,7 @@ while fofo==1:
         elif x==3 and y==1 and üü=="":
             üü=form
         else:
-            print("Unmöglicher Spielzug! Feld ist bereits besetzt!")
+            print(bcolors.WARNING + "\tUnmöglicher Spielzug! Feld bereits besetzt!"+bcolors.ENDC)
             if player==1:
                 player+=1
                 form="O"
@@ -137,7 +152,3 @@ while fofo==1:
                 pipi=0
 
             
-
-
-
- 
