@@ -24,6 +24,15 @@ def change_player(self):
     else:
         form="X"
         player-=1
+def print_table(self):
+        print("\t\t\t\t\t\t\t\t\t\t\t\t\t         1   2   3  ")
+        print("\t\t\t\t\t\t\t\t\t\t\t\t\t       +---+---+---+")
+        print("\t\t\t\t\t\t\t\t\t\t\t\t\t     1 |",k,"|",p,"|",üü,"|")
+        print("\t\t\t\t\t\t\t\t\t\t\t\t\t       +---+---+---+")
+        print("\t\t\t\t\t\t\t\t\t\t\t\t\t     2 |",l,"|",ü,"|",ää,"|")
+        print("\t\t\t\t\t\t\t\t\t\t\t\t\t       +---+---+---+")
+        print("\t\t\t\t\t\t\t\t\t\t\t\t\t     3 |",j,"|",ä,"|",öö,"|")
+        print("\t\t\t\t\t\t\t\t\t\t\t\t\t       +---+---+---+")
 
 if round==0:
     print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
@@ -90,15 +99,7 @@ if round==0:
 if start==("s"):
     print("\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t     Started the game\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")#ist entfernbar / nicht benötigt
     while fofo==1:
-        
-        print("\t\t\t\t\t\t\t\t\t\t\t\t\t         1   2   3  ")
-        print("\t\t\t\t\t\t\t\t\t\t\t\t\t       +---+---+---+")
-        print("\t\t\t\t\t\t\t\t\t\t\t\t\t     1 |",k,"|",p,"|",üü,"|")
-        print("\t\t\t\t\t\t\t\t\t\t\t\t\t       +---+---+---+")
-        print("\t\t\t\t\t\t\t\t\t\t\t\t\t     2 |",l,"|",ü,"|",ää,"|")
-        print("\t\t\t\t\t\t\t\t\t\t\t\t\t       +---+---+---+")
-        print("\t\t\t\t\t\t\t\t\t\t\t\t\t     3 |",j,"|",ä,"|",öö,"|")
-        print("\t\t\t\t\t\t\t\t\t\t\t\t\t       +---+---+---+")
+        print_table(0)
         change_player(0)
         print ("\n\t\t\t\t\t\t\t\t\t\t\t\t\tSpieler",player,"(",form,")"" ist dran.")
         x= int(input("\n\t\t\t\t\t\t\t\t\t\t\t\t\tPosition x:"))
@@ -130,38 +131,24 @@ if start==("s"):
             print("\n\n\t\t\t\t\t\t\t\t\t\t\t\t"+bcolors.WARNING + "Unmöglicher Spielzug! Feld bereits besetzt!\n\n"+bcolors.ENDC)
             change_player(0)
         if k==p==üü=="X" or l==ü==ää=="X" or j==ä==öö=="X" or k==l==j=="X" or p==ü==ä=="X" or üü==ää==öö=="X" or k==ü==öö=="X" or j==ü==üü=="X" or k==p==üü=="O" or l==ü==ää=="O" or j==ä==öö=="O" or k==l==j=="O" or p==ü==ä=="O" or üü==ää==öö=="O" or k==ü==öö=="O" or j==ü==üü=="O":
-            
-            print("\t\t\t\t\t\t\t\t\t\t\t\t\t         1   2   3  ")
-            print("\t\t\t\t\t\t\t\t\t\t\t\t\t       +---+---+---+")
-            print("\t\t\t\t\t\t\t\t\t\t\t\t\t     1 |",k,"|",p,"|",üü,"|")
-            print("\t\t\t\t\t\t\t\t\t\t\t\t\t       +---+---+---+")
-            print("\t\t\t\t\t\t\t\t\t\t\t\t\t     2 |",l,"|",ü,"|",ää,"|")
-            print("\t\t\t\t\t\t\t\t\t\t\t\t\t       +---+---+---+")
-            print("\t\t\t\t\t\t\t\t\t\t\t\t\t     3 |",j,"|",ä,"|",öö,"|")
-            print("\t\t\t\t\t\t\t\t\t\t\t\t\t       +---+---+---+")
+            print_table(0)
             if form=="X":
-                print("\n\t\t\t\t\t\t\t\t\t\t\t\t\t      "+bcolors.WARNING+"Player 1 (X) won!\n"+bcolors.ENDC)
+                print("\n\t\t\t\t\t\t\t\t\t\t\t\t\t     "+bcolors.WARNING+"Player 1 (X) won!\n"+bcolors.ENDC)
                 aktion_passiert=1
             elif form=="O":
-                print("\n\t\t\t\t\t\t\t\t\t\t\t\t\t      "+bcolors.WARNING+"Player 2 (O) won!\n"+bcolors.ENDC)
+                print("\n\t\t\t\t\t\t\t\t\t\t\t\t\t     "+bcolors.WARNING+"Player 2 (O) won!\n"+bcolors.ENDC)
                 aktion_passiert=1
             
 
         if k!=" "  and p!=" "  and üü!=" "  and l!=" "  and ü!=" "  and ää!=" "  and j!=" "  and ä!=" "  and öö !=" " and aktion_passiert==0:
-            print("\t\t\t\t\t\t\t\t\t\t\t\t\t         1   2   3  ")
-            print("\t\t\t\t\t\t\t\t\t\t\t\t\t       +---+---+---+")
-            print("\t\t\t\t\t\t\t\t\t\t\t\t\t     1 |",k,"|",p,"|",üü,"|")
-            print("\t\t\t\t\t\t\t\t\t\t\t\t\t       +---+---+---+")
-            print("\t\t\t\t\t\t\t\t\t\t\t\t\t     2 |",l,"|",ü,"|",ää,"|")
-            print("\t\t\t\t\t\t\t\t\t\t\t\t\t       +---+---+---+")
-            print("\t\t\t\t\t\t\t\t\t\t\t\t\t     3 |",j,"|",ä,"|",öö,"|")
-            print("\t\t\t\t\t\t\t\t\t\t\t\t\t       +---+---+---+")
+            print_table(0)
             print("\n\t\t\t\t\t\t\t\t\t\t\t\t\t  "+bcolors.WARNING +"Game is over! Nobody won!\n\n"+bcolors.ENDC)
             aktion_passiert=1
         
     
         if aktion_passiert==1:
             opa=input("\t\t\t\t\t\t\t\t\t\t\t\t     "+bcolors.WARNING+"Type 'r' to restart or 'e' to end: "+bcolors.ENDC)
+            print("\n\n\n\n")
             popo=1
             if opa=="r":
                 fofo=1
